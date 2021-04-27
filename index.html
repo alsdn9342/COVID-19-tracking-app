@@ -1,0 +1,79 @@
+<!-- 
+    Name: Min Woo Park
+    Email: parkminw@sheridancollege.ca
+    Date: 2021-03-01
+    Description: This is Assignment2 refering daily and Total confirmed cases in terms of Covid-19. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2f8d92374c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="mainBody">
+      <div class="subBody">
+        <h1>COVID-19 Canada</h1>
+        <form ="" class="form">
+          <label class="province" for="province">Province</label>
+          <select class="selectProvince">
+            <option value="canada">Canada</option>
+            <option value="ontario">Ontario</option>
+            <option value="quebec">Quebec</option>
+            <option value="britishColumbia">British Columbia</option>
+            <option value="alberta">Alberta</option>
+          </select>
+          <div class="dateBtn">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <lable class="date"></lable>
+          <div class="cases">
+            <div class="headLine">Confirmed Cases</div>
+            <div class="dailyAndTotal">
+              <div class="dailyDiv">
+                <p class="daily">Daily</p>
+                <p class="dailyNumber"></p>
+              </div>
+              <div class="totalDiv">
+                <p class="total">Total</p>
+                <p class="totalNumber"></p>
+              </div>
+            </div>
+            <footer class="reference">
+              Source: https://health-infobase.canada.ca
+            </footer>
+          </div>
+        </form>
+        <div class="lineChart"><canvas id="myChart"></canvas></div>
+        <div class="lineChart2"><canvas id="myChart2"></canvas></div>
+      </div>
+      <form class="selectDate"">
+        <label for="Date">Select Date:</label>
+        <input type="date" class="dateOfTable" required>
+        <input type="submit" class="submit" value="Search">
+      </form>
+      <table class="dataTable">
+        <tr class="thread">
+          <th id="date">Date</th>
+          <th>Today Confirmed</th>
+          <th>Total Confirmed</th>
+          <th>Today Tested</th>
+          <th>Total Tested</th>
+          <th>Today Deaths</th>
+          <th>Total Deaths</th>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

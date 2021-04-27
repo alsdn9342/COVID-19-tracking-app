@@ -1,0 +1,179 @@
+/* 
+Name: Min Woo Park
+Email: parkminw@sheridancollege.ca
+Date: 2021-03-01
+Description: This is Assignment2 refering daily and Total confirmed cases in terms of Covid-19. 
+*/
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary/main color */
+  --mainBody: hsl(216, 38%, 97%);
+  --clr-daily: rgb(23, 51, 209);
+  --clr-total: rgb(206, 13, 13);
+  --clr-footer: hsla(120, 4%, 55%, 0.945);
+  --clr-thread-background: hsl(120, 71%, 63%);
+  /*size*/
+  --fixed-width: 600px;
+  --fixed-height: 50%;
+  --fixed-width-chart2AndTable: 580px;
+  --margin-contents: 15px;
+  --margin-top: 20px;
+  --margin-top-cases: 40px;
+  --margin-head-h1: 28%;
+  --font-size-h1: 30px;
+  --font-size-contents: 20px;
+  --font-size-selectbar: 200px;
+  --font-size-dailyAndTotal: 35px;
+  --font-size-footer: 12px;
+  --font-size-tableDate: 100px;
+  /*Position*/
+  --dateBtn-top: 60px;
+  --dateBtn-left: 140px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.mainBody {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  min-width: 300px;
+  background-color: var(--mainBody);
+  width: var(--fixed-width);
+  height: var(--fixed-height);
+  margin-top: var(--margin-top);
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 2px 15px 3px #000000;
+  box-shadow: 1px 2px 15px 3px #000000;
+}
+
+.subBody {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  min-width: 300px;
+  margin-left: var(--margin-contents);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  min-width: 250px;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  margin-left: var(--margin-head-h1);
+}
+.province,
+.date,
+.headLine {
+  font-size: var(--font-size-contents);
+}
+
+.selectProvince {
+  width: var(--font-size-selectbar);
+  font-size: 20px;
+}
+.date,
+.cases {
+  margin-top: var(--margin-top-cases);
+}
+
+.dateBtn {
+  position: relative;
+  top: var(--dateBtn-top);
+  left: var(--dateBtn-left);
+  display: flex;
+  justify-content: space-around;
+  width: 50px;
+  font-size: 20px;
+}
+
+.fas:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: transform 300ms ease-in;
+}
+
+.dailyAndTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.daily,
+.total {
+  font-size: var(--font-size-dailyAndTotal);
+}
+.dailyNumber {
+  font-size: var(--font-size-dailyAndTotal);
+  color: var(--clr-daily);
+}
+
+.totalNumber {
+  font-size: var(--font-size-dailyAndTotal);
+  color: var(--clr-total);
+}
+
+footer {
+  font-size: var(--font-size-footer);
+  color: var(--clr-footer);
+}
+
+.lineChart {
+  width: 300px;
+  min-width: 300px;
+  height: 250px;
+  margin-right: 10px;
+}
+
+#myChart {
+  width: 340px;
+  height: 300px;
+}
+
+.lineChart2 {
+  flex-basis: var(--fixed-width-chart2AndTable);
+  min-width: 300px;
+  height: 300px;
+}
+
+.dataTable {
+  flex-basis: var(--fixed-width-chart2AndTable);
+  min-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.thread {
+  min-width: 300px;
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: var(--clr-thread-background);
+}
+
+.tableBody {
+  min-width: 300px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#date {
+  width: var(--font-size-tableDate);
+}
+
+.selectDate {
+  margin: 20px 0 0 10px;
+}
